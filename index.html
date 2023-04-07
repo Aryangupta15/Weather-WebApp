@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <title>Weather WebApp</title>
+</head>
+<body>
+    <nav class="navbar nv" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/wcjauznf.json"
+                    trigger="loop"
+                    colors="primary:#2516c7,secondary:#1663c7"
+                    style="width:50px;height:50px">
+                </lord-icon>
+            Weather WebApp
+          </a>
+        </div>
+      </nav>
+
+      <nav class="navbar search">
+          <h4>Search for the city</h4>
+        <div class="container-fluid ">
+          <form class="d-flex bar" role="search">
+            <input id = "city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit" id="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3 text-bg-primary">
+                <h4 class="my-0 fw-normal ">Temperature of <span id = "cityName"></span></h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><li>Temperature is: <span id = "temp"></span></li></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Min Temperature is: <span id = "min_temp"></span></li>
+                  <li>Max Temperature is: <span id = "max_temp"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+              <div class="card-header py-3 text-bg-primary">
+                <h4 class="my-0 fw-normal">Humidity & cloud</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><li>Humidity is: <span id = "humidity"></span></li></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>CLoud PCT is: <span id = "cloud_pct"></span></li>
+                    <li>Feels Like: <span id = "feels_like"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm ">
+              <div class="card-header py-3 text-bg-primary">
+                <h4 class="my-0 fw-normal">Wind Speed</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><li>Wind Speed is: <span id = "wind_speed"></span></li></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Wind Degree is: <span id = "wind_degrees"></span></li>
+                    <li>Sunrise Time is: <span id = "sunrise"></span></li>
+                    <li>Sunset Time is: <span id = "sunset"></span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <div class = "foot">
+        <h3><span id = "spn" >&copy</span> Aryan Gupta</h3>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>
